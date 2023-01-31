@@ -587,12 +587,10 @@ footer .copyright a:hover {
 
 #blogs .right-side {
   border: 1px solid #dee2e6;
-  padding: 40px 25px;
+  padding: 20px 20px;
 }
 
 #blogs .right-side .side-widgets {
-  border-bottom: 1px solid #dee2e6;
-  margin-bottom: 30px;
   padding-bottom: 30px;
 }
 
@@ -646,7 +644,7 @@ footer .copyright a:hover {
   padding: 10px 0;
   margin: 0;
   font-size: 20px;
-  letter-spacing: .7px;
+  letter-spacing: 0px;
 }
 
 #blogs .right-side .side-widgets ul li {
@@ -662,11 +660,59 @@ footer .copyright a:hover {
   padding-bottom: 10px;
   -webkit-transition: .5s;
   transition: .5s;
+  font-weight: 500;
 }
 
 #blogs .right-side .side-widgets ul li a:hover {
   color: #3d0f51;
   border-bottom: 2px dotted #3d0f51;
+}
+
+#blogs .right-side .side-widgets .latest-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  border-bottom: 2px dotted #dee2e6;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#blogs .right-side .side-widgets .latest-post:hover {
+  border-color: #3d0f51;
+}
+
+#blogs .right-side .side-widgets .latest-post .post-img img {
+  width: 100px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#blogs .right-side .side-widgets .latest-post .post-content a {
+  color: #676767;
+  text-decoration: none;
+  display: block;
+  padding-bottom: 10px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-weight: 500;
+}
+
+#blogs .right-side .side-widgets .latest-post .post-content a:hover {
+  color: #3d0f51;
+}
+
+#blogs .right-side .side-widgets .latest-post .post-content .meta span {
+  color: #676767;
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+#blogs .right-side .side-widgets .latest-post .post-content .meta span i {
+  margin-right: 5px;
 }
 
 #about {
