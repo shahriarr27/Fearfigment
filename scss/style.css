@@ -751,4 +751,80 @@ footer .copyright a:hover {
   margin-bottom: 16px;
   color: #333333;
 }
+
+#categories {
+  padding: 100px 0;
+  margin-bottom: 50px;
+}
+
+#categories .card {
+  border: 1px solid #eeeeee;
+  border-radius: 0;
+  padding-top: 40px;
+  margin: 0;
+  margin-bottom: 50px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#categories .card .outside-border {
+  display: block;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #007bff;
+  background: #007bff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#categories .card .outside-border::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(0, 123, 255, 0.2);
+  border-radius: 50%;
+}
+
+#categories .card .outside-border i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+}
+
+#categories .card .card-body h3 {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+#categories .card .card-body p {
+  line-height: 26px;
+  color: gray;
+}
+
+#categories .card:hover {
+  -webkit-box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.4);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+#categories .card:hover .outside-border {
+  background: transparent;
+}
+
+#categories .card:hover .outside-border i {
+  color: #007bff;
+}
 /*# sourceMappingURL=style.css.map */
