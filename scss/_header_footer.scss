@@ -2,6 +2,17 @@
    overflow: hidden;
    position: relative;
    height: 800px;
+   &::after {
+      content: "";
+      width: 100%;
+      height: 150px;
+      background: #ffffff;
+      position: absolute;
+      left: 0;
+      transform: skewY(-5deg);
+      z-index: 1;
+      bottom: -70px;
+   }
   .main-container {
      background: url(../images/hero-bg1.jpg);
      background-repeat: no-repeat;
@@ -20,6 +31,10 @@
         left: 0;
         background: rgba(0, 0, 0, 0.726);
         z-index: 1;
+     }
+     .navbar-nav{
+       display: flex;
+       flex-direction: row;
      }
 
      .navbar {
@@ -56,45 +71,6 @@
            font-size: 16px;
             font-weight: 700;
             margin: 0px 15px;
-        }
-     }
-
-     .dropdown {
-        &:hover>.dropdown-menu {
-           display: block;
-           animation: drop-item .5s forwards;
-        }
-
-        @keyframes drop-item {
-           from {
-              transform: translateY(35px)
-           }
-
-           to {
-              transform: translateY(0px);
-           }
-        }
-
-        .dropdown-menu {
-           border-radius: 0;
-           border: none;
-           padding: 0px 0px .5px 0;
-           border-top: 3px solid gray;
-           margin-top: -3px;
-
-           .dropdown-item {
-              padding: 5px 15px;
-              font-size: 14px;
-
-              &:hover {
-                 background: #EBEEF0;
-              }
-           }
-
-           .active {
-              background: #EBEEF0;
-              color: black;
-           }
         }
      }
   }
@@ -159,10 +135,13 @@
   }
 
   .down-arrow {
-     position: relative;
+     position: absolute;
      text-align: center;
      z-index: 15;
      transition: .5s;
+     left: 50%;
+     bottom: 60px;
+     transform: translateX(-50%);
      &:hover{
       a{
          i{
@@ -173,9 +152,7 @@
      a {
       width: 50px;
       height: 50px;
-      position: absolute;
       z-index: 30;
-      top: -120px;
       border-radius: 50%;
       background: #007BFF;
       text-align: center;
@@ -186,16 +163,6 @@
          color: white;
         }
      }
-  }
-  .skew-area{
-   position: absolute;
-   content: '';
-   width: 100%;
-   height: 300px;
-   background: rgb(255, 255, 255);
-   transform: skewY(-5deg) translateY(-25px);
-   transform-origin: bottom left;
-   z-index: 4;
   }
 }
 
